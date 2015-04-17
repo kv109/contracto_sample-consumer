@@ -1,0 +1,12 @@
+.row
+  .large-8.columns.large-centered
+    table
+      caption Note #{@note.id}
+      thead
+        tr
+          th width="100" Title
+          th width="300" Content
+      tbody
+        tr
+          td= @note.title
+          td= @note.content

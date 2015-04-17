@@ -1,0 +1,14 @@
+.row
+  .large-8.columns.large-centered
+    table
+      caption Users
+      thead
+        tr
+          th width="50%" First name
+          th Last name
+      tbody
+        - @users.each do |user|
+          tr
+            td
+              = link_to user.first_name, user_path(user.id)
+            td= truncate user.last_name, length: 100

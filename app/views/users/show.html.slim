@@ -1,0 +1,12 @@
+.row
+  .large-8.columns.large-centered
+    table
+      caption Note #{@user.id}
+      thead
+        tr
+          th width="100" First name
+          th width="300" Last name
+      tbody
+        tr
+          td= @user.first_name
+          td= @user.last_name

@@ -1,0 +1,14 @@
+.row
+  .large-8.columns.large-centered
+    table
+      caption Notes
+      thead
+        tr
+          th width="50%" Title
+          th Content
+      tbody
+        - @notes.each do |note|
+          tr
+            td
+              = link_to note.title, note_path(note.id)
+            td= truncate note.content, length: 100
