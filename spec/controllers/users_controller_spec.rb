@@ -1,11 +1,14 @@
 require 'rails_helper'
 
-RSpec.describe NotesController, :type => :request do
+RSpec.describe UsersController, :type => :request do
 
   it 'GET show' do
-    get '/users/1'
+    get '/users'
 
-    html = '<td>Albert</td>'
+    html = '<th>Total</th><th>Average age</th>'
+    expect(response.body).to match(html)
+
+    html = '<td>2</td><td>32.5</td>'
     expect(response.body).to match(html)
   end
 

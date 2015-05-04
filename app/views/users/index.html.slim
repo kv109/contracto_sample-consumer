@@ -1,14 +1,14 @@
 .row
-  .large-8.columns.large-centered
+  .large-8.columns
     table
       caption Users
       thead
         tr
-          th width="50%" First name
-          th Last name
+          th Total
+          th Average age
       tbody
-        - @users.each do |user|
-          tr
-            td
-              = link_to user.first_name, user_path(user.id)
-            td= truncate user.last_name, length: 100
+        tr
+          td
+            = @users.count
+          td
+            = @users.map(&:age).sum.to_f / @users.count
