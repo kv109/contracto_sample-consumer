@@ -11,7 +11,7 @@ group :development do
 end
 
 group :test do
-  gem 'contracto', git: 'https://github.com/contracto-lab/contracto-server.git'
+  gem 'contracto'#, git: 'https://github.com/contracto-lab/contracto-server.git'
   gem 'contracto-rspec'
 end
 
