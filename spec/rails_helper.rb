@@ -8,7 +8,7 @@ require 'contracto/rspec'
 ActiveRecord::Migration.maintain_test_schema!
 
 RSpec.configure do |config|
-  Contracto::RSpec.start!(git: 'https://github.com/kv109/contracto_sample-contract.git')
+  Contracto::RSpec.start!(git: 'git@github.com:kv109/contracto-format.git')
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = true
   config.infer_spec_type_from_file_location!

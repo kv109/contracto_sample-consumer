@@ -6,4 +6,6 @@ end
 Callapi::Routes.draw do
   get 'users'
   get 'users/:id'
+  get 'notes'
+  get 'notes/:id'
 end
